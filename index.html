@@ -5,44 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
   <form>
-    <label for="user_name">Повне ім'я</label>
-    <input type="text" id="user_name" name="user_name" value="user_name" required><br>
+    <div>
+      <label for="user_name">Повне ім'я</label>
+      <input type="text" id="user-name" name="user-name" required minlength="3">
+    </div>
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" value="email" required><br>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required>
+    </div>
 
-    <label for="password-one">Пароль</label>
-    <input type="text" name="password_one" id="password_one" required><br>
+    <div>
+      <label for="password-one">Пароль</label>
+      <input type="text" name="pwd-one" id="password-one" required>
+    </div>
 
-    <label for="password-two">Пароль ще раз</label>
-    <input type="text" name="password-two" id="password-two" required><br>
+    <div>
+      <label for="password-two">Пароль ще раз</label>
+      <input type="text" name="pwd-two" id="password-two" required>
+    </div>
 
-    <label for="sex">Стать</label>
-    <label>
-      <input type="radio" name="man" id="sex" value="man" checked>чоловіча
-    </label>
-    <label>
-      <input type="radio" name="woman" id="sex" value="woman">жіноча
-    </label><br>
+    <div>
+      <label for="sex">Стать</label>
+      <label>
+        <input type="radio" name="gender" id="sex" value="man" checked>чоловіча
+      </label>
+      <label>
+        <input type="radio" name="gender" id="sex" value="woman">жіноча
+      </label>
+    </div>
 
-    <label for="age">Вік</label>
-    <input type="text" name="age" id="age" required><br>
+    <div>
+      <label for="age">Вік</label>
+      <input type="text" name="age" id="age" required>
+    </div>
 
-    <label for="course">Курс</label>
-    <select name="course_name" id="course" placeholder="-=Виберіть курс=-">
-      <option value="front_end">Front-End</option>
-      <option value="back_end">Back-End</option>
-      <option value="project_management">Project Management</option>
-      <option value="qa_manual">QA manual</option>
-    </select><br>
+    <div>
+      <label for="course">Курс</label>
+      <select name="course_name" id="course" value="-=Виберіть курс=-">
+        <option value="front_end">Front-End</option>
+        <option value="back_end">Back-End</option>
+        <option value="project_management">Project Management</option>
+        <option value="qa_manual">QA manual</option>
+      </select>
+    </div>
 
-    <label for="adress">Повна адреса</label>
-    <textarea name="adress" id="adress" cols="27" rows="4"
-      placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
+
+    <div>
+      <input type="checkbox" id="user-privacy" name="user-privacy" value="true" />
+      <label for="user-privacy">
+        <span>
+          <svg height="8" width="10">
+            <use href="./images/icons.svg#icon-checkmark"></use>
+          </svg>
+        </span>
+        <span>Я погоджуюся з обробкою персональних даних</span>
+      </label>
+    </div>
+
+    <div>
+      <label for="adress">Повна адреса</label>
+      <textarea name="adress" id="adress" cols="27" rows="4" placeholder="Країна, регіон, місто/селище, вулиця"
+        required></textarea>
+    </div>
 
     <div>
       <button>Очистити форму</button>
