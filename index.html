@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
@@ -36,12 +36,12 @@
     </div>
 
     <div>
-      <label for="sex">Стать</label>
+      <span class="gender">Стать</span>
       <label>
-        <input type="radio" name="gender" id="sex" value="man" checked>чоловіча
+        <input class="gender-item" type="radio" name="gender" value="man" checked>чоловіча
       </label>
       <label>
-        <input type="radio" name="gender" id="sex" value="woman">жіноча
+        <input class="gender-item" type="radio" name="gender" value="woman">жіноча
       </label>
     </div>
 
@@ -52,7 +52,8 @@
 
     <div>
       <label for="course">Курс</label>
-      <select name="course_name" id="course" value="-=Виберіть курс=-">
+      <select name="course_name" id="course">
+        <option value="Виберіть курс">-=Виберіть курс=-</option>
         <option value="front_end">Front-End</option>
         <option value="back_end">Back-End</option>
         <option value="project_management">Project Management</option>
@@ -60,22 +61,16 @@
       </select>
     </div>
 
-
     <div>
       <input type="checkbox" id="user-privacy" name="user-privacy" value="true" />
       <label for="user-privacy">
-        <span>
-          <svg height="8" width="10">
-            <use href="./images/icons.svg#icon-checkmark"></use>
-          </svg>
-        </span>
         <span>Я погоджуюся з обробкою персональних даних</span>
       </label>
     </div>
 
     <div>
       <label for="adress">Повна адреса</label>
-      <textarea name="adress" id="adress" cols="27" rows="4" placeholder="Країна, регіон, місто/селище, вулиця"
+      <textarea name="adress" id="adress" cols="23" rows="4" placeholder="Країна, регіон, місто/селище, вулиця"
         required></textarea>
     </div>
 
