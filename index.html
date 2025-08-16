@@ -38,10 +38,10 @@
     <div>
       <span class="gender">Стать</span>
       <label>
-        <input class="gender-item" type="radio" name="gender" value="man" checked>чоловіча
+        <input class="gender-item" type="radio" name="gender" value="man" required>чоловіча
       </label>
       <label>
-        <input class="gender-item" type="radio" name="gender" value="woman">жіноча
+        <input class="gender-item" type="radio" name="gender" value="woman" required>жіноча
       </label>
     </div>
 
@@ -53,7 +53,7 @@
     <div>
       <label for="course">Курс</label>
       <select name="course_name" id="course">
-        <option value="Виберіть курс">-=Виберіть курс=-</option>
+        <option value selected hidden disabled>-=Виберіть курс=-</option>
         <option value="front_end">Front-End</option>
         <option value="back_end">Back-End</option>
         <option value="project_management">Project Management</option>
